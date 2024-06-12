@@ -1,0 +1,1 @@
+# cambs_bin_day_auto
