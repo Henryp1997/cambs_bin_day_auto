@@ -1,0 +1,7 @@
+bin_day_url = https://www.cambridge.gov.uk/check-when-your-bin-will-be-emptied
+firefox_path = C:\Program Files\Mozilla Firefox\firefox.exe
+post_code = CB13AP
+address = 143 Catharine Street
+user_gmail = htapiscool@gmail.com
+user_receive = htap2@live.co.uk
+gmail_app_passwd = klnh fige tonv gjoj
