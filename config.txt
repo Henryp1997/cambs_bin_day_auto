@@ -1,5 +1,6 @@
 bin_day_url = https://www.cambridge.gov.uk/check-when-your-bin-will-be-emptied
 firefox_path =
+geckodriver_path =
 post_code =
 address =
 user_gmail =
