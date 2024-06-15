@@ -121,7 +121,7 @@ def get_next_bin(bin_dict):
     return f"Next bin = {next_bin}, collection date is {next_bin_date.strftime(date_format)}"
             
 def read_config(string):
-    with open(f'{os.path.dirname(os.path.realpath(__file__))}/config_priv.txt', 'r') as f:
+    with open(f'{os.path.dirname(os.path.realpath(__file__))}/config.txt', 'r') as f:
         params = f.readlines()
     
     return [i.split(" = ")[1] for i in params if string in i][0].strip("\n")
