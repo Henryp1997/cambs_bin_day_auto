@@ -25,7 +25,7 @@ def main():
     address = read_config("address")
 
     # firefox browser object
-    service = Service(f"{global_dir}/drivers/geckodriver.exe")
+    service = Service(read_config("geckodriver_path"))
     firefox_options = webdriver.FirefoxOptions()
     firefox_options.add_argument("--headless")
     firefox_options.binary_location = read_config("firefox_path")
