@@ -27,7 +27,7 @@ def main():
     # firefox browser object
     service = Service(f"{global_dir}/drivers/geckodriver.exe")
     firefox_options = webdriver.FirefoxOptions()
-    firefox_options.add_argument("--headless=new")
+    firefox_options.add_argument("--headless")
     firefox_options.binary_location = read_config("firefox_path")
     browser = webdriver.Firefox(service=service, options=firefox_options)
 
@@ -113,7 +113,9 @@ def get_next_bin(bin_dict):
     today = datetime.now()
 
     # after 7am on the day of collection
-    if ((today - next_bin_date).seconds) / 3600 > 7:
+    time_diff = today - next_bin_date
+    time_diff_secs = (time_diff.days * 86400) + time_diff.seconds
+    if time_diff_secs > 7 * 3600:
         index = bin_options.index(next_bin) - 1
         next_bin = bin_options[index]
         next_bin_date = bin_dates[index]
